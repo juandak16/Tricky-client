@@ -1,0 +1,239 @@
+@font-face{
+  font-family: "Bangers";
+  src: url(./fonts/Bangers-Regular.ttf);
+}
+.app-main-container {
+  margin: 0 auto;
+  margin-top: 15vh;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 100%;
+  grid-gap: 15px;
+  min-height: 500px;
+}
+
+.user-controls {
+  width: 80%;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  border-radius: 0px 6px 0px 0px;
+  background-color: rgb(44,37,64);
+  color: white;
+  box-shadow: 8px 21px 18px -5px rgba(0,0,0,0.41);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+
+.user-controls > span,
+input,
+button {
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+.button-data{
+  background-color: rgb(186,118,161);
+  width: 133px;
+  height: 31px;
+  border: 0;
+  color: white;
+  margin-left: 30px;
+  box-shadow: -4px 4px 2px 0px rgba(0,0,0,0.42);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.input-data{
+  border: 0;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.current-users {
+  width: 80%;
+  padding: 20px;
+  border-radius: 0px 0px 6px 0px;
+  height: 229px;
+  background-color: rgb(44,37,64);
+  color: white;
+  box-shadow: 8px 13px 18px -5px rgba(0,0,0,0.41);
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+
+.current-users > p {
+  font-size: 12px;
+}
+.data-container{
+  width: 240px;
+}
+
+.game{
+  min-width: 683px;
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 3px 6px 18px 0px rgba(0,0,0,0.41);
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: 3fr 0.3fr;
+  background-image: url("./assets/tablero.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.game-header{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.marcador{
+  text-align: center;
+}
+.tablero-container{
+  position: relative;
+  display: grid;
+  width: 367px;
+  grid-template: repeat(3,1fr)/repeat(3,1fr);
+  height: 337px;
+  margin-top: 64px;
+}
+.block-game{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.casilla{
+    width: 110px;
+    height: 99px;
+    display: flex;
+    align-Items: center;
+    justify-Content: center;
+    margin: 7px 0px 0px 7px ;
+}
+.x{
+  background-image: url(./assets/x.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  outline: 1px solid red;
+}
+.o{
+  background-image: url(./assets/o.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  outline: 1px solid blue;
+}
+.tablero{
+  display: grid;
+  grid-template-columns: 23% 54% 23%;
+}
+
+.iconHidden{
+  width: 30px;
+  height: 30px;
+  margin-left: 94px;
+  margin-top: 105px;
+}
+.iconX{
+  background-image: url(./assets/turn-x.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  margin-left: 94px;
+  margin-top: 105px;
+}
+.playerOne{
+  margin-left: 40px;
+  margin-top: 25px;
+  color: white;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+.iconO{
+  background-image: url(./assets/turn-o.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+  margin-left: 33px;
+  margin-top: 105px;
+}
+.playerTwo{
+  margin-left: 40px;
+  margin-top: 26px;
+  color: white;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+.ojos{
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: -53px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ojos > .ojo {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.ojos.izquierda > .ojo {
+  transform: rotate(45deg);
+}
+.ojos.derecha > .ojo {
+  transform: rotate(-45deg);
+}
+.pupila{
+  background-color: black;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.game-actions {
+  display: grid;
+  grid-template-columns: 23% 54% 23%;
+}
+.button-action{
+  background-color: rgb(186,118,161);
+  width: 116px;
+  height: 31px;
+  border: 0;
+  color: white;
+  margin: 3px;
+  box-shadow: -4px 4px 2px 0px rgba(0,0,0,0.42);
+  font-family: 'Bangers', cursive;
+  font-size: 30px
+}
+.buttons{
+  text-align: center;
+}
+body{
+  background-image: url(./assets/texture.jpg);
+  background-repeat: repeat;
+  background-size: 6px;
+}
