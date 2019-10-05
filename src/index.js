@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import openSocket from 'socket.io-client';
 
-const socketConnection = (openSocket('http://192.168.1.9:8000'));
+const socketConnection = (openSocket('http://192.168.10.6:8000'));
 console.log(socketConnection);
 ReactDOM.render(<App socketConnection={socketConnection} />, document.getElementById('root'));
 

@@ -65,45 +65,6 @@ const Game = ({
 
   return (
     <div className="game" >
-      {/*<div className='game-header'>
-        <div className='playerOne-container'>
-          <p>
-            {`Player one: ${
-              game.playerOne === undefined ?
-              '' :
-              currentUsers[game.playerOne].name
-            }`}
-          </p>
-          <p>
-            {`Player One Address: ${
-              game.playerOne === undefined ?
-              '' :
-              currentUsers[game.playerOne].address
-            }`}
-          </p>
-        </div>
-        <div className='marcador'>
-          <p> Player Turn </p>
-            <p> {game.turn} </p>
-        </div>
-        
-        <div className='playerTwo-container'>
-          <p>
-            {`Player two: ${
-              game.playerTwo === undefined ?
-              '' :
-              currentUsers[game.playerTwo].name
-            }`}
-          </p>
-          <p>
-            {`Player two Address: ${
-              game.playerTwo === undefined ?
-              '' :
-              currentUsers[game.playerTwo].address
-            }`}
-          </p>
-        </div>
-          </div>*/}
       <div className='tablero'>
         <div>
           { game.turn === 1? <div className='iconX'/> : <div className='iconHidden'/>}
